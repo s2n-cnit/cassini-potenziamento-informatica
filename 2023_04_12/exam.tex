@@ -1,0 +1,397 @@
+% cspell:ignore language ignore
+
+\documentclass[a4paper,11pt,addpoints]{exam}
+
+\usepackage[italian]{babel}
+\usepackage{format}
+
+\setdate{\nth{12} \wApril 2023}
+
+\begin{document}
+\addheader
+
+\begin{important}
+    \item Questo documento è scaricabile tramite il seguente link:
+    \begin{center}
+        \small
+        \hl{\url{\examURL}}\\[5mm]
+        \qrcode[hyperlink,height=2cm]{\examURL}
+    \end{center}
+    \item Per ogni domanda creare un file \filename{$X$.py} dove \emph{$X$} è il numero della domanda
+    con un \hl{numero di \num{0} come prefisso}
+    per avere esattamente \hl{\num{3} cifre}.
+    \item Creare un file \hl{zip} con i vari file \hl{python} del punto precedente e
+    rinominarlo \filename{\emph{cognome}-\emph{nome}.zip} dove \emph{cognome} e \emph{nome} sono
+    rispettivamente il \hl{nome} e il \hl{cognome} dello studente.
+    \item Fare l'upload del file \hl{zip} tramite il seguente link:
+    \begin{center}
+        \small
+        \hl{\url{\submitURL}}\\[5mm]
+        \qrcode[hyperlink,height=2cm]{\submitURL}
+    \end{center}
+\end{important}
+
+\begin{notes}
+    \item La \hl{valutazione} sarà fatta sulla base dei \hl{\num{93} punti totali}
+    secondo la seguente \hl{proporzione}:
+    \begin{equation*}
+        v = \frac{p}{93} \times 10
+    \end{equation*}
+    devo $p$ e $v$ sono, rispettivamente, i \hl{punti} ottenuti in questa prova e la \hl{valutazione} finale.
+\end{notes}
+
+\begin{examples}
+    \item Ipotizziamo che lo studente \hl{Paolo Rossi} debba rispondere a \hl{\num{25} domande}.
+    \item I file \hl{python} saranno: \filename{001.py}, \filename{002.py}, \dots, \filename{025.py}.
+    \item Il file \hl{zip contenente} tali file \hl{python} sarà chiamato: \filename{rossi-paolo.zip}.
+\end{examples}
+
+
+\begin{questions}
+    \question[3] \qTitle{Max tra Due Numeri} Scrivi un programma che chieda due numeri all'utente tramite la
+    funzione \python{input} e mostri il più grande tra i due utilizzando la funzione \python{print}.
+
+    \begin{important}
+        \item Per quanto Python disponga di una funzione \python{max()}, siete invitati ad utilizzare
+        le istruzioni istruzioni \python{if}, \python{elif} ed python{else} per la scrittura dell'algoritmo.
+    \end{important}
+
+    \begin{solution}
+        \small\inputminted{python}{solution/001.py}
+    \end{solution}
+
+    \questionspace
+
+    \question[9] \qTitle{Max tra Tre Numeri} Scrivi un programma che chieda tre numeri $a$, $b$, $c$
+    all'utente e mostri il più grande tra loro.
+
+    \begin{important}
+        \item Per quanto Python disponga di una funzione \python{max()}, siete invitati ad utilizzare
+        le istruzioni istruzioni \python{if}, \python{elif} ed \python{else} per la scrittura dell'algoritmo.
+    \end{important}
+
+    \begin{solution}
+        \small\inputminted{python}{solution/002.py}
+    \end{solution}
+
+    \questionspace
+
+    \question[3] \qTitle{Il Maggiore tra Tutti!} Scrivi un programma che chieda all'utente una \hl{lista}
+    di numeri e fornisca in output il maggiore tra tutti.
+
+    \begin{important}
+        \item Per quanto Python disponga di una funzione \python{max()}, siete invitati ad utilizzare
+        le istruzioni istruzioni \python{if}, \python{elif} ed \python{else} per la scrittura dell'algoritmo.
+    \end{important}
+
+    \begin{solution}
+        \small\inputminted{python}{solution/003.py}
+    \end{solution}
+
+    \questionspace
+
+    \question[3] \qTitle{Sei una Vocale?} Scrivi un programma che chieda all'utente una \hl{stringa}
+    composta da un solo carattere e dica se si tratta di una vocale oppure no.
+
+    \begin{solution}
+        \small\inputminted{python}{solution/004.py}
+    \end{solution}
+
+    \questionspace
+
+    \question[3] \qTitle{Somma Inarrestabile} Scrivi un semplice programma che, data una lista di numeri,
+    sommi tra loro tutti gli elementi.
+
+    \begin{tips}
+        \item Anche se esiste la funzione \python{sum()} per risolvere l'esercizio potresti usare il ciclo \python{for}.
+    \end{tips}
+
+    \begin{solution}
+        \small\inputminted{python}{solution/005.py}
+    \end{solution}
+
+    \questionspace
+
+    \question[3] \qTitle{Somma Inarrestabile} Scrivi un programma \qm{moltiplicatore} che, data una lista di numeri,
+    moltiplichi tra loro tutti gli elementi.
+
+    \begin{solution}
+        \small\inputminted{python}{solution/006.py}
+    \end{solution}
+
+    \questionspace
+
+    \question[3] \qTitle{Solamente per Soci} Scrivi un programma che a partire da un elemento e una lista di elementi dica in output se
+    l'elemento passato sia presente o meno nella lista.
+
+    \begin{tips}
+        \item Qualora l'elemento sia presente nella lista, il programma dovrà comunicarci
+        l'indice dell'elemento tramite il metodo \python{index}.
+    \end{tips}
+
+    \begin{solution}
+        \small\inputminted{python}{solution/007.py}
+    \end{solution}
+
+    \questionspace
+
+    \question[3] \qTitle{Generatore di Istogrammi} Scrivi una semplice \hl{funzione} che, data una lista di numeri, fornisca in output
+    un \hl{istogramma} basato su questi numeri, usando asterischi per disegnarlo.
+
+    \begin{examples}
+        \item Data la lista [3, 7, 9, 5], la funzione dovrà produrre questa sequenza:
+        \begin{quote}
+            ***\\
+            *******\\
+            *********\\
+            *****\\
+        \end{quote}
+    \end{examples}
+
+    \begin{solution}
+        \small\inputminted{python}{solution/008.py}
+    \end{solution}
+
+    \questionspace
+
+    \question[3] \qTitle{Scriviamo la nostra versione di len()} Scrivi una funzione che restituisca la lunghezza di una stringa o lista passata come parametro.
+
+    \begin{tips}
+        \item In sostanza, seppur presente, provate a scrivere la nostra versione della funzione \python{len}!
+    \end{tips}
+
+    \begin{solution}
+        \small\inputminted{python}{solution/009.py}
+    \end{solution}
+
+    \questionspace
+
+    \question[2] \qTitle{A Ciascuno il Suo} Scrivi una funzione che data in ingresso una lista A contenente $n$ parole,
+    restituisca in output una lista B di interi che rappresentano la lunghezza delle parole contenute in A.
+
+    \begin{tips}
+        \item Questo esercizio può essere risolto anche usando una \hl{list comprehension}.
+        \small\inputminted{python}{example/list-comprehension.py}
+    \end{tips}
+
+    \begin{solution}
+        \small\inputminted{python}{solution/010.py}
+    \end{solution}
+
+    \questionspace
+
+    \question[3] \qTitle{Il Frequenzimetro} Scrivi una funzione che, data una stringa come parametro, restituisca un \hl{dizionario}
+    rappresentante la \qm{frequenza di comparsa} di ciascun carattere componente la stringa.
+
+    \begin{examples}
+        \item Data una stringa \python{"ababcc"}, otterremo in risultato \python{{"a": 2, "b": 2, "c": 2}}.
+    \end{examples}
+
+    \begin{solution}
+        \small\inputminted{python}{solution/011.py}
+    \end{solution}
+
+    \questionspace
+
+    \question[4] \qTitle{L'Americana} Scrivi una funzione che, dato in ingresso un valore espresso in metri, mandi in \python{print}
+    l'equivalente in \hl{miglia terrestri, iarde, piedi e pollici}. Come risolverai questo esercizio?
+
+    \begin{table}[!ht]
+        \centering\small
+        \begin{tblr}{
+                colspec = {|c|c|c|},
+                row{odd} = {Goldenrod},
+                row{even} = {GreenYellow},
+                row{1} = {ForestGreen},
+            }\hline
+            \hl{Misura}               & \hl{Nome inglese} & \hl{Equivalente SI}                      \\\hline\hline
+            millesimo di pollice, mil & thou              & \SI{0.0254}{\milli\meter}                \\\hline[dashed]
+            linea                     & line              & \SI{0.635}{\milli\meter}                 \\\hline[dashed]
+            pollice                   & inch              & \SI{25.4}{\milli\meter}                  \\\hline[dashed]
+            mano                      & hand              & \SI{101.6}{\milli\meter}                 \\\hline[dashed]
+            spanna                    & span              & \SI{228.6}{\milli\meter}                 \\\hline[dashed]
+            piede                     & foot              & \SI{304.8}{\milli\meter}                 \\\hline[dashed]
+            gomito (cubito)           & cubit             & \SI{457.2}{\milli\meter}                 \\\hline[dashed]
+            iarda                     & yard              & \SI{3}{\foot} = \SI{914.4}{\milli\meter} \\\hline[dashed]
+            braccio                   & fathom            & \SI{2}{\yard} = \SI{1.8288}{\meter}      \\\hline[dashed]
+            barra, pertica            & rod, pole, perch  & \SI{5.0292}{\meter}                      \\\hline[dashed]
+            catena                    & chain             & \SI{20.1168}{\meter}                     \\\hline[dashed]
+            furlong                   & furlong           & \SI{201.168}{\meter}                     \\\hline[dashed]
+            miglio terrestre          & statute mile      & \SI{1760}{\yard} = \SI{1609.344}{\meter} \\\hline
+        \end{tblr}
+    \end{table}
+
+    \begin{solution}
+        \small\inputminted{python}{solution/012.py}
+    \end{solution}
+
+    \questionspace
+
+    \question[5] \qTitle{Il Signore del Tempo} Scrivi una semplice funzione che converta un dato numero di giorni, ore e minuti,
+    passati dall'utente tramite funzione input, in secondi.
+
+    \begin{solution}
+        \small\inputminted{python}{solution/013.py}
+    \end{solution}
+
+    \questionspace
+
+    \question[12] \qTitle{Il Geometra} Scrivi una funzione che, a scelta dell'utente, calcoli l'area di:
+    \begin{itemize}
+        \item un cerchio
+        \item un quadrato
+        \item un rettangolo
+        \item un triangolo
+    \end{itemize}
+
+    \begin{tips}
+        \item Sentitevi liberi di estendere le potenzialità della funzione quanto meglio credete!
+    \end{tips}
+
+    \begin{solution}
+        \small\inputminted{python}{solution/014.py}
+    \end{solution}
+
+    \questionspace
+
+    \question[4] \qTitle{Funzione Genera MAC} Un indirizzo \hl{MAC} (\hl{Media Access Control address}) è un indirizzo univoco
+    associato dal produttore, a un chipset per comunicazioni wireless (es. WiFi o Bluetooth),
+    composto da 6 coppie di cifre esadecimali separate da due punti.  Scrivi una funzione \python{genera_mac()} che
+    generi degli indirizzi \hl{MAC} pseudo casuali.
+
+    \begin{examples}
+        \item 02:FF:A5:F2:55:12
+        \item 00:02:C9:35:32:31
+        \item 66:10:CB:CC:E4:80
+    \end{examples}
+
+    \begin{tips}
+        \item Utilizzare il modulo \python{random}.
+    \end{tips}
+
+    \begin{solution}
+        \small\inputminted{python}{solution/015.py}
+    \end{solution}
+
+    \questionspace
+
+    \question[2] \qTitle{Info di Sistema} Scrivi una funzione che fornisca in output il nome del Sistema Operativo utilizzato
+    con eventuali relative informazioni sulla release corrente.
+
+    \begin{tips}
+        \item Per risolvere questo esercizio potreste dover utilizzare una \hl{libreria} ( \python{platform})!
+    \end{tips}
+
+    \begin{solution}
+        \small\inputminted{python}{solution/016.py}
+    \end{solution}
+
+    \questionspace
+
+    \question[2] \qTitle{Trova ASCII} Scrivi una funzione che, dato un carattere in ingresso, restituisca in output il \hl{codice ASCII}
+    associato al carattere passato.
+
+    \begin{tips}
+        \item Anche in questo caso, usare una libreria (\hl{ord}) potrebbe facilitare la risoluzione dell'esercizio!
+    \end{tips}
+
+    \begin{solution}
+        \small\inputminted{python}{solution/017.py}
+    \end{solution}
+
+    \questionspace
+
+    \question[9] \qTitle{Il Numero Perfetto} Un numero perfetto è un \hl{numero naturale} uguale alla somma dei suoi divisori positivi,
+    escluso sé stesso. Scrivi una funzione che verifichi se un numero è perfetto oppure no.
+
+    \begin{solution}
+        \small\inputminted{python}{solution/018.py}
+    \end{solution}
+
+    \questionspace
+
+    \question[2] \qTitle{Lista di Colori} Scrivi una funzione che aggiunga ad una lista \num{10} colori inseriti dall'utente.
+    Il programma deve poi chiedere all'utente di inserire una lettera e mostrare in output solo
+    i colori nella lista che iniziano con quella lettera.
+
+    \begin{tips}
+        \item Potresti usare la funzione \python{range} e il metodo \python{startswith()}.
+    \end{tips}
+
+    \begin{solution}
+        \small\inputminted{python}{solution/019.py}
+    \end{solution}
+
+    \questionspace
+
+    \question[3] \qTitle{Print senza andare a capo} Scrivi una funzione che prenda una serie di input dall'utente utilizzando un ciclo
+    \python{while} e li stampi con la funzione \python{print} senza andare a capo.
+    Il ciclo \python{while} si deve interrompere
+    quando l'utente preme \key{INVIO} senza scrivere nulla.
+
+    \begin{solution}
+        \small\inputminted{python}{solution/020.py}
+    \end{solution}
+
+    \questionspace
+
+    \question[3] \qTitle{La Segreteria} Scrivi una funzione che accetti una lista di \hl{dizionari} rappresentante una scuola.
+    Ogni dizionario rappresenta uno studente e contiene nome, cognome, classe e voti.
+    La funzione deve stampare un elenco di tutti gli studenti e calcolare la media dei voti di ciascuno.
+
+    \begin{solution}
+        \small\inputminted{python}{solution/021.py}
+    \end{solution}
+
+    \questionspace
+
+    \question[2] \qTitle{Gestione Login} Scrivi un programma che crei un \hl{file CSV} per memorizzare in un dizionario i dati
+    degli utenti registrati su un sito web. I dati richiesti per ogni utente sono: username, password,
+    email e data di registrazione. Il programma deve permettere di salvare le informazioni nel file,
+    leggere i dati e stamparli a schermo.
+
+    \begin{solution}
+        \small\inputminted{python}{solution/022.py}
+    \end{solution}
+
+    \questionspace
+
+    \question[2] \qTitle{Testi di canzoni} Scrivi una funzione che permetta di inserire una canzone e salvarla in un \hl{file di testo}.
+    Il programma deve chiedere all'utente di inserire il titolo e il testo della canzone, e poi salvare
+    quest'ultimo in un file intitolato \filename{titolo-canzone.txt}.
+
+    \begin{tips}
+        \item Dovrai utilizzare l'istruzione \python{with}.
+    \end{tips}
+
+    \begin{solution}
+        \small\inputminted{python}{solution/023.py}
+    \end{solution}
+
+    \questionspace
+
+    \question[2] \qTitle{Il Sistema Solare} Scrivi una funzione che crei una \hl{tupla} contenente i nomi dei pianeti del sistema solare,
+    la loro tipologia (gassoso o roccioso) e il numero di satelliti naturali conosciuti.
+    Il programma deve quindi stampare a schermo il contenuto della tupla e il numero totale di satelliti.
+
+    \begin{solution}
+        \small\inputminted{python}{solution/024.py}
+    \end{solution}
+
+    \questionspace
+
+    \question[3] \qTitle{Sport di squadra e individuali} Scrivi una funzione che prenda come argomento un set di sport preferiti dall'utente e
+    stampi un messaggio di testo che indica se si tratta di uno sport di squadra o individuale.
+
+    \begin{tips}
+        \item Per valutare la stringa inserita potrebbe essere utile utilizzare il metodo \python{lower}.
+    \end{tips}
+
+    \begin{solution}
+        \small\inputminted{python}{solution/025.py}
+    \end{solution}
+
+    \addpointtable
+\end{questions}
+
+\end{document}

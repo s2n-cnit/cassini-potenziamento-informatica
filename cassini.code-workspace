@@ -1,0 +1,120 @@
+{
+	"folders": [
+		{
+			"name": "Cassini - Potenziamento Informatica",
+			"path": "."
+		}
+	],
+	"settings": {
+		"workbench.editorAssociations": {
+			"*.csv": "default"
+		},
+		"cSpell.words": [
+			"azure",
+			"Bluetooth",
+			"chain",
+			"CRRLSN",
+			"cubit",
+			"dashed",
+			"even",
+			"fathom",
+			"furlong",
+			"hand",
+			"inch",
+			"mile",
+			"perch",
+			"pole",
+			"purple",
+			"sourcery",
+			"span",
+			"statute",
+			"thou",
+			"tupla",
+			"wireless",
+			"yard"
+		],
+		"cSpell.language": "it,en-US,en,it-IT",
+		"latex-workshop.latex.recipes": [
+			{
+				"name": "exam",
+				"tools": [
+					"pdflatex",
+					"pdflatex",
+					"pdflatex",
+					"pdflatex-solution",
+					"pdflatex-solution",
+					"pdflatex-solution",
+					"dist",
+					"dist-solution"
+				]
+			},
+			{
+				"name": "clean",
+				"tools": [
+					"clean"
+				]
+			}
+		],
+		"latex-workshop.latex.tools": [
+			{
+				"name": "pdflatex",
+				"command": "pdflatex",
+				"args": [
+					"-synctex=1",
+					"-shell-escape",
+					"-interaction=nonstopmode",
+					"-output-directory=build",
+					"-file-line-error",
+					"%DOC%"
+				],
+				"env": {}
+			},
+			{
+				"name": "dist",
+				"command": "mv",
+				"args": [
+					"%DIR%/build/%DOCFILE%.pdf",
+					"%DIR%/dist/%DOCFILE%.pdf"
+				],
+				"env": {}
+			},
+			{
+				"name": "clean",
+				"command": "rm",
+				"args": [
+					"%DIR%/build/%DOCFILE%.aux",
+					"%DIR%/build/solution-%DOCFILE%.aux",
+				],
+				"env": {}
+			},
+			{
+				"name": "dist-solution",
+				"command": "mv",
+				"args": [
+					"%DIR%/build/solution-%DOCFILE%.pdf",
+					"%DIR%/dist/solution-%DOCFILE%.pdf"
+				],
+				"env": {}
+			},
+			{
+				"name": "pdflatex-solution",
+				"command": "pdflatex",
+				"args": [
+					"-synctex=1",
+					"-shell-escape",
+					"-output-directory=build",
+					"-interaction=nonstopmode",
+					"-file-line-error",
+					"--jobname=solution-%DOCFILE%",
+					"%DOC%"
+				],
+				"env": {}
+			}
+		],
+		"latex-workshop.latex.autoBuild.run": "never",
+		"[python]": {
+			"editor.defaultFormatter": "ms-python.black-formatter"
+		},
+		"python.formatting.provider": "none"
+	}
+}
