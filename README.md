@@ -1,2 +1,1 @@
-# cassini-potenziamento-informatica
-Potenziamento Informatica @ Cassini
+# Potenziamento Informatica @ Cassini
